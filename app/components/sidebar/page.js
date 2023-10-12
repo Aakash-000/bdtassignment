@@ -17,7 +17,7 @@ export default function Sidebar(){
             <AiOutlinePullRequest style={{fontSize: state.sidebar ? "1.7rem" : "2.2rem"}}/>
             <li className={state.sidebar ? "sidebar-links" : "hidden"}>Get Request</li>
             </div> */}
-            {localStorage.getItem("role") == "ADMIN" && 
+            {localStorage.getItem("role") == "Admin" && 
             <Link href={"/dashboard/postjob"}>
             <div className="flex flex-row items-center gap-3 cursor-pointer">
             <AiOutlineFileAdd style={{fontSize: state.sidebar ? "1.5rem" : "1.7rem"}}/>

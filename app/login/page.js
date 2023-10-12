@@ -14,10 +14,26 @@ export default function LoginPage(){
     const[istext,setText] = useState(false)
     const router = useRouter()
     
-    const handleSubmit = (e)=> {
+
+
+    const handleSubmit = async(e)=> {
         e.preventDefault()
-        localStorage.setItem("role","USER")
-        router.push("/dashboard")
+        try{
+            const req = await fetch("https://localhost:7241/api/Auth/Signin",{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:JSON.stringify(logindetail)
+            })
+            const res = await req.json()
+            localStorage.setItem("role",res.role)
+            router.push("/dashboard")
+            console.log(res)
+        }catch(error){
+            console.log(error)
+        }
+        
     }
 
     return(

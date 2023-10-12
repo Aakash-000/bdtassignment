@@ -9,7 +9,7 @@ export default function GetList(){
 
 function TableData(){
     switch(localStorage.getItem("role")){
-    case "USER":
+    case "User":
     return(
     <section>
     <div className="relative flex flex-col gap-5 overflow-x-auto">
@@ -52,7 +52,7 @@ function TableData(){
     </section>
     )
     break;
-    case "ADMIN":
+    case "Admin":
         return(
             <section>
             <div className="relative flex flex-col gap-5 overflow-x-auto">

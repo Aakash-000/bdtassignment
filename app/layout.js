@@ -8,9 +8,9 @@ const nunito = Nunito_Sans({ subsets: ['latin'] })
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <AuthProvider>
-      <body className={nunito.className}>{children}</body>
-      </AuthProvider>
+      
+      <body className={nunito.className}>
+      <AuthProvider>{children}</AuthProvider></body>
     </html>
   )
 }

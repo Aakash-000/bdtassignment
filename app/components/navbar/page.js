@@ -50,6 +50,7 @@ export default function Navbar(){
         <button className="hero-button bg-navbutton px-4 py-1 rounded-full outline outline-1 border-t-bordercolor" type="submit" onClick={handleClick}>Search</button>
         </form>
         </div>
+        <h1 className="text-base font-bold">{localStorage.getItem("role")}</h1>
     </nav>
     </header>
     </>
